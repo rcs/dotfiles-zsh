@@ -30,5 +30,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-source ~/perl5/perlbrew/etc/bashrc
-[[ -s "/Users/rcs/.rvm/scripts/rvm" ]] && source "/Users/rcs/.rvm/scripts/rvm" 
+[[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
