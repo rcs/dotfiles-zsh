@@ -34,6 +34,7 @@ if alias ls > /dev/null; then
 else
 	alias ls="ls --color=tty -F"
 fi
+
 if which dircolors >> /dev/null && [[ -s ~/.dircolors ]]; then eval $(dircolors "$HOME/.dircolors"); fi
 [[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
