@@ -29,6 +29,11 @@ export PATH="$HOME/bin/local:$HOME/bin:/usr/local/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-
+if alias ls > /dev/null; then
+	alias ls="$(which ls | sed -e 's/.*: aliased to //') -F"
+else
+	alias ls="ls --color=tty -F"
+fi
+if which dircolors >> /dev/null && [[ -s ~/.dircolors ]]; then eval $(dircolors "$HOME/.dircolors"); fi
 [[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
